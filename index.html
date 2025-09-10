@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture-in-Picture Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Picture-in-Picture デモ</h1>
+            <p>ビデオを小さなウィンドウで表示できます</p>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <video id="video" controls poster="https://via.placeholder.com/800x450/4a90e2/ffffff?text=Sample+Video"
+                    width="800" height="450">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        type="video/mp4">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.webm"
+                        type="video/webm">
+                    お使いのブラウザは動画タグをサポートしていません。
+                </video>
+            </div>
+
+            <div class="external-controls">
+                <button id="pipButton" class="pip-button" disabled>
+                    <span class="pip-icon">📺</span>
+                    Picture-in-Picture
+                </button>
+            </div>
+
+            <div class="info-section">
+                <h2>使用方法</h2>
+                <ul>
+                    <li>ビデオを再生してください</li>
+                    <li>「Picture-in-Picture」ボタンをクリックして小さなウィンドウで表示</li>
+                    <li>小さなウィンドウは他のアプリケーションの上に表示されます</li>
+                    <li>小さなウィンドウをダブルクリックして元のサイズに戻すことができます</li>
+                </ul>
+            </div>
+
+            <div class="status-section">
+                <h3>ステータス</h3>
+                <div id="status" class="status">準備中...</div>
+                <div id="pipStatus" class="pip-status">Picture-in-Picture: 無効</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
