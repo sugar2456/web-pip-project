@@ -61,13 +61,6 @@ class PictureInPictureDemo {
             this.togglePictureInPicture();
         });
 
-        // // 全画面ボタン（存在する場合のみ）
-        // if (this.fullscreenButton) {
-        //     this.fullscreenButton.addEventListener('click', () => {
-        //         this.toggleFullscreen();
-        //     });
-        // }
-
         // ビデオイベント
         this.video.addEventListener('loadedmetadata', () => {
             this.updateStatus('ビデオの読み込み完了');
